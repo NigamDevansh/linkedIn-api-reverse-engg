@@ -1,0 +1,29 @@
+# Secrets — never commit a LinkedIn session cookie
+.env
+.env.*
+!.env.example
+*.cookie
+cookies.txt
+
+# Raw captures. These contain real people's profile data and must never be
+# committed. Run tools/anonymize_fixture.py and commit the scrubbed output
+# to tests/fixtures/ instead.
+captures/
+raw/
+*_raw.json
+tests/fixtures/*_real.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
